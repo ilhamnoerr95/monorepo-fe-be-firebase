@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"target": "ES6",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"baseUrl": "./",
+		"rootDir": "./",
+		"outDir": "./dist",
+		"strict": true,
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"allowImportingTsExtensions": false,
+		"noEmit": false,
+		"forceConsistentCasingInFileNames": true
+	},
+	"include": ["**/*.ts", "**/*.json"],
+	"exclude": ["node_modules"]
+}

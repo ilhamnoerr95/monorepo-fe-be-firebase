@@ -4,7 +4,7 @@ const path = require("path");
 
 // running backend
 const backend = spawn("yarn", ["server:dev"], {
-	cwd: path.join(__dirname, "/apps/backend-repo"),
+	cwd: path.join(__dirname, "/apps/backend"),
 });
 backend.stdout.on("data", (data) => {
 	console.log(`Backend: ${data}`);
@@ -15,7 +15,7 @@ backend.stderr.on("data", (data) => {
 
 // running frontend (Next.js)
 const frontend = spawn("yarn", ["server:dev"], {
-	cwd: path.join(__dirname, "/apps/front-repo"),
+	cwd: path.join(__dirname, "/apps/frontend"),
 });
 
 frontend.stdout.on("data", (data) => {

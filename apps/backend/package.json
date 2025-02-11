@@ -1,0 +1,43 @@
+{
+	"dependencies": {
+		"chalk": "4.1.2",
+		"dotenv": "^16.4.7",
+		"express": "^4.21.2",
+		"firebase-admin": "^13.1.0",
+		"morgan": "^1.10.0"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.20.0",
+		"@types/express": "^5.0.0",
+		"@types/morgan": "^1.9.9",
+		"@types/node": "^22.13.1",
+		"@typescript-eslint/eslint-plugin": "^8.23.0",
+		"@typescript-eslint/parser": "^8.23.0",
+		"copyfiles": "^2.4.1",
+		"eslint": "^9.20.0",
+		"globals": "^15.14.0",
+		"nodemon": "^3.1.9",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.7.3",
+		"typescript-eslint": "^8.23.0"
+	},
+	"name": "backend-repo",
+	"version": "1.0.0",
+	"description": "goes to singapore",
+	"main": "core/app.ts",
+	"scripts": {
+		"cleanup": "rm -rf dist",
+		"test-file": "ts-node --files core/app.ts",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"copy-files": "copyfiles -u 1 config/**/*.json dist",
+		"build": "yarn cleanup && tsc && yarn copy-files",
+		"server:start": "yarn build && node dist/core/app.js",
+		"server:dev": "nodemon --exec ts-node core/app.ts ",
+		"firebase:local": "firebase emulators:start --only functions"
+	},
+	"keywords": [
+		"backend-repo"
+	],
+	"author": "ilhamnrachman",
+	"license": "ISC"
+}

@@ -1,0 +1,75 @@
+.page {
+	display: grid;
+	/* grid-template-rows: 20px 1fr 20px; */
+	align-items: center;
+	justify-items: center;
+	min-height: 100svh;
+	padding: 80px;
+	gap: 64px;
+	font-family: var(--font-geist-sans);
+	color: var(--background);
+	background-image: url("../../public/image/wallpaper.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@media (prefers-color-scheme: dark) {
+	.page {
+		--gray-rgb: 255, 255, 255;
+		--gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+		--gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+
+		--button-primary-hover: #ccc;
+		--button-secondary-hover: #1a1a1a;
+	}
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	grid-row-start: 2;
+}
+
+.main ol {
+	font-family: var(--font-geist-mono);
+	padding-left: 0;
+	margin: 0;
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: -0.01em;
+	list-style-position: inside;
+}
+
+.main li:not(:last-of-type) {
+	margin-bottom: 8px;
+}
+
+.main code {
+	font-family: inherit;
+
+	padding: 2px 4px;
+	border-radius: 4px;
+	font-weight: 600;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+}
+
+@media (max-width: 600px) {
+	.page {
+		padding: 32px;
+		padding-bottom: 80px;
+	}
+
+	.main {
+		align-items: center;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.logo {
+		filter: invert();
+	}
+}
