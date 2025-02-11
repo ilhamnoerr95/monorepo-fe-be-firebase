@@ -1,0 +1,13 @@
+{
+	"scripts": {
+		"turbo:start": "turbo run start",
+		"turbo:dev": "turbo run dev",
+		"server:dev": "node server.ts",
+		"lint": "turbo run lint"
+	},
+	"packageManager": "yarn@1.22.19",
+	"devDependencies": {
+		"@types/node": "^22.13.1",
+		"turbo": "^2.4.1"
+	}
+}
